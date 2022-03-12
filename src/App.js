@@ -9,8 +9,8 @@ function App() {
     <>
     <Navbar/>
     <main className="main">
-    <HeroSection/> 
-    <About/>                                               
+    {/* <HeroSection/>  */}
+    {/* <About/>                                                */}
     </main>                                                                 
     </>
   );
