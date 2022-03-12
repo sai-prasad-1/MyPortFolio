@@ -1,4 +1,5 @@
 import React from 'react'
+import abtImg from "../assets/prefil.jpg" 
 
 const About = () => {
   return (
@@ -7,7 +8,7 @@ const About = () => {
     <span className="section_subtitle">My Introduction</span>
 
 <div className="about_container container grid">
-        {/* <img src="assets/img/about.jpg" alt="" className="about_img"/> */}
+        <img src={abtImg} alt="" className="about_img"/>
     
 
     <div className="about_data">
