@@ -8,9 +8,9 @@ function App() {
   return (
     <>
     <Navbar/>
-    <main class="main">
-    <HeroSection/> 
-    <About/>                                               
+    <main className="main">
+    {/* <HeroSection/>  */}
+    {/* <About/>                                                */}
     </main>                                                                 
     </>
   );
