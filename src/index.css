@@ -213,6 +213,10 @@ img{
 
 }
 
+.dsp-hidden{
+    display: none;
+}
+
 .nav_logo:hover{
     color: var(--first-color);
 

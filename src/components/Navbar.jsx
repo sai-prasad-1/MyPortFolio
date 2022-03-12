@@ -1,35 +1,19 @@
 import React from 'react'
+import { useState } from 'react'
 
-const Navbar = () => {
-    const navmenu = document.getElementById('nav-menu'),
-      navToggle = document.getElementById('nav-toggle')
-     
-    
-   
-    
-    const navtoggle =()=>{
-        navmenu.classList.add('show-menu');
-        navToggle.style.opacity = 0
-
-    }
-    
-    const navclose = ()=>{
-        navmenu.classList.remove('show-menu');
-        navToggle.style.opacity = 1
-    }
-    /*==================== REMOVE MENU MOBILE ====================*/
+const Navbar = () => {  
+    const [isOpen, setIsOpen] = useState(false);
     let linkAction=()=>{
-        navmenu.classList.remove('show-menu')
-        navToggle.style.opacity = 1
+        setIsOpen(!isOpen);
     }
     
     
-
+// 
   return (
     <header className="header" id="header">
     <nav className="nav container">
         <a href="#home" className="nav_logo">Sai Prasad</a>
-        <div className="nav_menu show-menu" id="nav-menu">
+        <div className={`nav_menu ${isOpen?"show-menu":""}`} id="nav-menu">
             <ul className="nav_list grid">
                 <li className="nav_item">
                     <a href="#home" className="nav_link active-link" onClick={linkAction}>
@@ -64,13 +48,13 @@ const Navbar = () => {
 
 
             </ul>
-            <i className="uil uil-times nav_close " id="nav-cls" onClick={navclose}></i>
+            <i className={`uil uil-times nav_close ${isOpen?"":"dsp-hidden"}`}  id="nav-cls" onClick={()=>{setIsOpen(false)}}></i>
         </div>
         <div className="nav_btns">
             {/* <!-- Theame change Button --> */}
             <i className="uil uil-sun change-theme" id="theme-button"></i>
 
-            <div className="nav_toggle" id="nav-toggle" onClick={navtoggle}>
+            <div className={`nav_toggle ${isOpen?"dsp-hidden":""}`} id="nav-toggle" onClick={()=>{setIsOpen(true)}}>
                 <i className="uil uil-apps"></i>
                 
             </div>
