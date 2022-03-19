@@ -148,7 +148,7 @@ const Portfolio = () => {
                 <i class="uil uil-message project_icon button_icon"></i>
               </a>
             </div>
-            <img src={projectImg} alt="" class="project_img" />
+            <img src={projectImg} alt="portfolio img" class="project_img" />
           </div>
         </div>
       </section>
